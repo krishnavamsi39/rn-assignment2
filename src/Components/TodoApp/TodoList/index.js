@@ -45,7 +45,6 @@ class TodoList extends Component {
           extraData={this.props}
           renderItem={({ item }) => (
             <Todo
-              toggle={this.props.toggle}
               updateTodo={this.props.updateTodo}
               onToggleTaskCompletetion={this.props.onToggleTaskCompletetion}
               deleteTodo={this.props.deleteTodo}

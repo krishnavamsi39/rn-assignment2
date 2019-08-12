@@ -43,7 +43,6 @@ class Todo extends Component {
           onValueChange={this.handleToggle}
         />
         <EditableTodo
-          toggle={this.props.toggle}
           updateTodo={this.props.updateTodo}
           todo={this.props.todo}
           isEditable={this.state.isEditable}

@@ -47,7 +47,7 @@ class TodoApp extends Component {
       todoList: todos
     });
   };
-  handlePress = () => {
+  handleAddButton = () => {
     this.setState({ displayTodoList: false });
   };
   render() {
@@ -57,14 +57,9 @@ class TodoApp extends Component {
           <Text style={{ color: "white" }}>Header</Text>
         </View>
         {!this.state.displayTodoList ? (
-          <EnterTodo
-            onPressKeyDone={this.addTodo}
-            todoTextValue=""
-            textstyle="textInput"
-          />
+          <EnterTodo onPressKeyDone={this.addTodo} todoTextValue="" />
         ) : (
           <TodoList
-            toggle={this.handlePress}
             onToggleTaskCompletetion={this.onToggleTaskCompletetion}
             todoList={this.state.todoList}
             deleteTodo={this.deleteTodo}
@@ -75,7 +70,7 @@ class TodoApp extends Component {
         <ActionButton
           style={styles.button}
           buttonColor="blue"
-          onPress={this.handlePress}
+          onPress={this.handleAddButton}
         />
       </View>
     );

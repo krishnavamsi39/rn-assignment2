@@ -15,7 +15,6 @@ class EnterTodo extends Component {
     return (
       <TextInput
         placeholder="What needs to be done?"
-        style={styles.textstyle}
         onChangeText={text => this.setState({ text })}
         value={this.state.text}
         onSubmitEditing={this.onPressDone}
@@ -26,19 +25,5 @@ class EnterTodo extends Component {
     return <>{this.handleDisplay()}</>;
   }
 }
-const styles = StyleSheet.create({
-  textInput: {
-    position: "absolute",
-    width: width,
-    marginTop: 70,
-    borderRadius: 2,
-    borderWidth: 1,
-    borderColor: "blue",
-    backgroundColor: "white"
-  },
-  edit: {
-    position: "relative",
-    width: 200
-  }
-});
+const styles = StyleSheet.create({});
 export default EnterTodo;

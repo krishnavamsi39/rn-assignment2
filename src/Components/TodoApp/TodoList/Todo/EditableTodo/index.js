@@ -4,15 +4,11 @@ import { Button } from "react-native-paper";
 const width = Dimensions.get("window").width;
 import EnterTodo from "../../../EnterTodo";
 class EditableTodo extends Component {
-  handlePress = () => {
-    console.log(1);
-  };
   renderMessage = () => {
     if (this.props.isEditable) {
       return (
         <EnterTodo
           todoTextValue={this.props.todo.todoText}
-          textstyle="edit"
           onPressKeyDone={this.handleEdit}
         />
       );
