@@ -59,19 +59,20 @@ class TodoApp extends Component {
         {!this.state.displayTodoList ? (
           <EnterTodo onPressKeyDone={this.addTodo} todoTextValue="" />
         ) : (
-          <TodoList
-            onToggleTaskCompletetion={this.onToggleTaskCompletetion}
-            todoList={this.state.todoList}
-            deleteTodo={this.deleteTodo}
-            updateTodo={this.updateEachTodo}
-          />
+          <>
+            <TodoList
+              onToggleTaskCompletetion={this.onToggleTaskCompletetion}
+              todoList={this.state.todoList}
+              deleteTodo={this.deleteTodo}
+              updateTodo={this.updateEachTodo}
+            />
+            <ActionButton
+              style={styles.button}
+              buttonColor="blue"
+              onPress={this.handleAddButton}
+            />
+          </>
         )}
-
-        <ActionButton
-          style={styles.button}
-          buttonColor="blue"
-          onPress={this.handleAddButton}
-        />
       </View>
     );
   }

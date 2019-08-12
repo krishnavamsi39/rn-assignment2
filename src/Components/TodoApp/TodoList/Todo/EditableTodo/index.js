@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, CheckBox, Dimensions } from "react-native";
+import { Text, View, CheckBox, Dimensions, Vibration } from "react-native";
 import { Button } from "react-native-paper";
 const width = Dimensions.get("window").width;
 import EnterTodo from "../../../EnterTodo";
@@ -36,6 +36,7 @@ class EditableTodo extends Component {
     this.props.handleEditable();
   };
   handleEditable = () => {
+    Vibration.vibrate(100);
     this.props.handleEditable();
   };
   render() {
