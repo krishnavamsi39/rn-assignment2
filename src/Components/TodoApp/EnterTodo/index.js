@@ -8,7 +8,8 @@ class EnterTodo extends Component {
     this.state = { text: this.props.todoTextValue };
   }
   onPressDone = () => {
-    if (this.state.text != "") this.props.onPressKeyDone(this.state.text);
+    if (this.state.text.trim() != "")
+      this.props.onPressKeyDone(this.state.text);
   };
   handleDisplay = () => {
     const { textstyle } = this.props;

@@ -36,7 +36,7 @@ class EditableTodo extends Component {
     this.props.handleEditable();
   };
   handleEditable = () => {
-    Vibration.vibrate(100);
+    Vibration.vibrate(50);
     this.props.handleEditable();
   };
   render() {

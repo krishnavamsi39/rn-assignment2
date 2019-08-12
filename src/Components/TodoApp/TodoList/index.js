@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     position: "absolute",
-    top: height - 105,
+    top: height - 160,
     width: width
   }
 });
