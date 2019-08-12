@@ -20,19 +20,19 @@ class Footer extends Component {
         <BottomNavigation active={this.props.active} hidden={false}>
           <BottomNavigation.Action
             key="all"
-            icon="today"
+            icon="format-list-bulleted"
             label="All"
             onPress={this.handleAll}
           />
           <BottomNavigation.Action
             key="active"
-            icon="people"
+            icon="lock-open"
             label="Active"
             onPress={this.handleActive}
           />
           <BottomNavigation.Action
             key="completed"
-            icon="bookmark-border"
+            icon="check-circle"
             label="Completed"
             onPress={this.handleCompleted}
           />

@@ -50,7 +50,11 @@ class Todo extends Component {
           handleEditable={this.handleEditable}
         />
 
-        <Button style={styles.button} icon="call" onPress={this.handleDelete} />
+        <Button
+          style={styles.button}
+          icon="delete"
+          onPress={this.handleDelete}
+        />
       </View>
     );
   }
