@@ -1,14 +1,27 @@
 import React, { Component } from "react";
-import { View, TextInput, Button } from "react-native";
+import {
+  View,
+  TextInput,
+  ActivityIndicator,
+  Button,
+  Alert
+} from "react-native";
 import { Actions } from "react-native-router-flux";
 class LoginPage extends Component {
   constructor(props) {
     super(props);
-    this.state = { username: "", password: "" };
+    this.state = { username: "", password: "", isLoading: false };
   }
   handleLogin = () => {
-    if (this.state.username === "Vamsi" && this.state.password === "Vamsi")
-      Actions.todoapp();
+    this.setState({ isLoading: true });
+    setTimeout(() => {
+      if (this.state.username === "Vamsi" && this.state.password === "Vamsi") {
+        Actions.todoapp();
+      } else {
+        Alert.alert("please try again");
+      }
+      this.setState({ isLoading: false });
+    }, 2000);
   };
   render() {
     return (
@@ -25,6 +38,11 @@ class LoginPage extends Component {
         />
 
         <Button title={"Login"} onPress={this.handleLogin} />
+        {this.state.isLoading ? (
+          <ActivityIndicator size="large" color="#0000ff" />
+        ) : (
+          <></>
+        )}
       </View>
     );
   }
